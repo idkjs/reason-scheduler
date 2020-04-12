@@ -4,12 +4,12 @@ type recurrence =
   | Hour(int);
 
 type job = {
-    period: recurrence,
-    invoke: unit => unit
+  period: recurrence,
+  invoke: unit => unit,
 };
 
 exception TimerIsMissing;
 type t;
 
 let create: unit => t;
-let add: (t, job) => unit
+let add: (t, job) => unit;
